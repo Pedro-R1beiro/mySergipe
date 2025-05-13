@@ -1,0 +1,59 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: #039334;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+
+    .inputBox {
+        position: relative;
+
+        label {
+            position: absolute;
+            left: 0;
+            bottom: 2px;
+            background-color: #039334;
+            transition: bottom 0.3s;
+        }
+    
+        input {
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid #fff;
+            outline: none;
+            color: #fff;
+            
+            &:focus~label {
+                bottom: 20px;
+            }
+            
+            &:valid~label {
+                bottom: 20px;
+            }
+        }
+    }
+
+    .containerBtns {
+        display: flex;
+        flex-direction: row;
+        
+        button {
+            width: min(6rem, 30vw);
+            min-width: fit-content;
+            padding: 10px;
+            border-radius: 5px;
+            border: 0;
+            cursor: pointer;
+            transition: all 0.3s;
+            background-color: #003612;
+            color: #fff;
+            
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+    
+}
